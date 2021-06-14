@@ -13,9 +13,9 @@ Harvardx CS50 course
 
 | Project | Name | Movie |
 | ------------- | ------------- | ------------- |
-| Project 0   | Search  | ------------- |
-| Project 1   | Wiki  | ------------- |
-| Project 2   | Commerce  | ------------- |
+| Project 0   | Search  | https://youtu.be/jRsaaUZ6Zo4  |
+| Project 1   | Wiki  | https://youtu.be/Xn-LcFV5nPA |
+| Project 2   | Commerce  | https://youtu.be/gVDNksnAjUY |
 | Project 3   | Mail  | ------------- |
 | Project 4   | Network  | ------------- |
 | Project 5   | Capstone  | ------------- |
