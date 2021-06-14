@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Log In
+{% endblock %}
+
+{% block main %}
+
+ <table>
+                <thead>
+                    <tr class="thead">
+                        <th>Symbol</th>
+                        <th>Shares</th>
+                        <th>Price</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    {% for tab in tab %}
+
+                    <tr>
+                        <td>{{ tab.symbol }}</td>
+                        <td>{{ tab.shares }}</td>
+                        <td>${{ tab.price }}</td>
+                        <td>${{ tab.date }}</td>
+                    </tr>
+
+                    {% endfor %}
+
+                </tbody>
+
+            </table>
+
+{% endblock %}

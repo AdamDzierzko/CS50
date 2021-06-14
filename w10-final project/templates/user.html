@@ -1,0 +1,145 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Users
+{% endblock %}
+
+{% block main %}
+
+<div style="text-align: center;">
+
+<button class="button" style=" margin-top: 100px; margin-left: -35em; margin-bottom: 35px" data-toggle="modal" data-target="#modalRegisterForm" >Dodaj użytkownika</button>
+
+<div class="modal fade" id="modalRegisterForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center" style="background-color: #17a2b8">
+        <h4 class="modal-title w-100 font-weight-bold" style="color: white; font-size: 20px">Nowy użytkownik</h4>
+        <button type="button" class="close" data-dismiss="modal" style="color: white" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <form action="/addUser" method="post">
+        <div class="modal-body mx-3">
+
+          <div class="md-form mb-5">
+            <i class="fas fa-user prefix grey-text"></i>
+            <label data-error="wrong" data-success="right" for="orangeForm-pass">Imię</label>
+            <input type="text" id="orangeForm-name" class="form-control validate" name="u_name" placeholder="Imię" type="text">
+          </div>
+        </div>
+
+        <div class="modal-footer d-flex justify-content-center">
+          <button class="btn btn-outline-info btn-lg" type="submit">Dodaj</button>
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+</div>
+
+            <table class="table table-striped" style="text-align: center;">
+                <thead>
+                    <tr class="thead" style="font-size: 18px">
+                        <th>id</th>
+                        <th>Name</th>
+                        <th>DataTime</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    {% for tab in user_tab %}
+
+                    <tr>
+                        <td>{{ tab.id }}</td>
+                        <td>{{ tab.name }}</td>
+                        <td>{{ tab.date }} </td>
+                        <td><button class="btn btn-primary" data-toggle="modal" data-target="#modalEditForm{{ tab.id }}" >Edit</button></td>
+                        <td><button class="btn btn-primary" style="background-color: #dc3545; border: 1px solid #dc3545;" data-toggle="modal" data-target="#modalConfirmDelete{{ tab.id }}">Usuń</button></td>
+                    </tr>
+
+                    {% endfor %}
+
+            </table>
+
+{% for tab in user_tab %}
+
+<div class="modal fade" id="modalEditForm{{ tab.id }}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center" style="background-color: #007bff">
+        <h4 class="modal-title w-100 font-weight-bold" style="color: white; font-size: 20px">Modyfikuj użytkownika</h4>
+        <button type="button" class="close" data-dismiss="modal" style="color: white" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <form action="/updateUser" method="post">
+        <div class="modal-body mx-3">
+
+          <div class="md-form mb-5">
+            <i class="fas fa-user prefix grey-text"></i>
+            <label data-error="wrong" data-success="right" for="orangeForm-pass">Imię</label>
+            <input type="text" id="orangeForm-name" class="form-control validate" name="u_name" placeholder="Imię" value="{{ tab.name }}">
+            <input type="hidden" id="orangeForm-name" class="form-control validate" name="u_id" placeholder="Imię" value="{{ tab.id }}">
+          </div>
+
+        </div>
+
+        <div class="modal-footer d-flex justify-content-center">
+          <button class="btn btn-outline-primary btn-lg" type="submit">Zmień</button>
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+</div>
+
+<!--Modal: modalConfirmDelete-->
+<div class="modal fade" id="modalConfirmDelete{{ tab.id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm modal-notify modal-danger" role="document">
+    <!--Content-->
+    <div class="modal-content text-center">
+      <!--Header-->
+      <div class="modal-header d-flex justify-content-center" style="background-color: #dc3545">
+        <p class="heading" style="color: white; font-size: 20px">Na pewno?</p>
+      </div>
+
+
+      <form action="/deleteUser" method="post">
+        <input type="hidden" id="orangeForm-name" class="form-control validate" name="u_id" value="{{ tab.id }}">
+      <!--Body-->
+        <div class="modal-body">
+
+          <i class="fas fa-times fa-4x animated rotateIn"></i>
+
+
+        </div>
+
+      <!--Footer-->
+        <div class="modal-footer flex-center">
+
+          <button class="btn btn-outline-danger btn-lg" type="submit">Tak</button>
+          <a type="button" class="btn  btn-danger waves-effect btn-lg" data-dismiss="modal">Nie</a>
+
+       </form>
+
+        </div>
+
+    </div>
+    <!--/.Content-->
+  </div>
+</div>
+<!--Modal: modalConfirmDelete-->
+
+{% endfor %}
+
+</div>
+</div>
+
+{% endblock %}
+
