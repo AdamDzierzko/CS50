@@ -13,11 +13,11 @@ Harvardx CS50 course
 
 | Project | Name | Movie |
 | ------------- | ------------- | ------------- |
-| Content Cell  | Content Cell  | ------------- |
-| Content Cell  | Content Cell  | ------------- |
-| Content Cell  | Content Cell  | ------------- |
-| Content Cell  | Content Cell  | ------------- |
-| Content Cell  | Content Cell  | ------------- |
-| Content Cell  | Content Cell  | ------------- |
+| Project 0   | Content Cell  | ------------- |
+| Project 1   | Content Cell  | ------------- |
+| Project 2   | Content Cell  | ------------- |
+| Project 3   | Content Cell  | ------------- |
+| Project 4   | Content Cell  | ------------- |
+| Project 5   | Content Cell  | ------------- |
 
 
