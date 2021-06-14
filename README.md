@@ -11,7 +11,7 @@ Harvardx CS50 course
 | Project 4 | Network | https://youtu.be/57t-MiEsSJo |
 | Project 5 | Capstone | https://youtu.be/ohviXbcoBxs |
 
-| Project  | Second Header | ------------- |
+| Project | Name | Movie |
 | ------------- | ------------- | ------------- |
 | Content Cell  | Content Cell  | ------------- |
 | Content Cell  | Content Cell  | ------------- |
