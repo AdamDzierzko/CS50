@@ -13,11 +13,11 @@ Harvardx CS50 course
 
 | Project | Name | Movie |
 | ------------- | ------------- | ------------- |
-| Project 0   | Content Cell  | ------------- |
-| Project 1   | Content Cell  | ------------- |
-| Project 2   | Content Cell  | ------------- |
-| Project 3   | Content Cell  | ------------- |
-| Project 4   | Content Cell  | ------------- |
-| Project 5   | Content Cell  | ------------- |
+| Project 0   | Search  | ------------- |
+| Project 1   | Wiki  | ------------- |
+| Project 2   | Commerce  | ------------- |
+| Project 3   | Mail  | ------------- |
+| Project 4   | Network  | ------------- |
+| Project 5   | Capstone  | ------------- |
 
 
